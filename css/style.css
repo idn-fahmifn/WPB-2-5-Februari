@@ -1,6 +1,6 @@
 /* ini adalah style.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap");
 
 .text-tebal {
   font-weight: 600;
@@ -14,18 +14,18 @@
   padding: 20px;
 }
 
-.box{
+.box {
   border: 0.5px #0e0e0e solid;
   padding: 30px;
   margin: 20px 0;
 }
 
-.title{
+.title {
   background: #33ff00;
   padding: 30px;
 }
 
-.container{
+.container {
   width: 90dvw; /* 90% lebar layar */
   min-height: 10dvh; /* 10%  tinggi layar */
   border: 0.5px #6b6b6b solid;
@@ -39,7 +39,7 @@
   3. bisa mengatur ukuran
 */
 
-.d-block{
+.d-block {
   width: 70%;
   padding: 20px;
   margin: 10px 0;
@@ -47,7 +47,7 @@
   display: block;
 }
 
-.d-inline{
+.d-inline {
   width: 100dvw !important;
   padding: 20px;
   margin: 20px;
@@ -55,19 +55,102 @@
   display: inline;
 }
 
-.nav-item{
-  display: inline;
+.nav-item {
+  display: inline-block;
   margin: 20px;
 }
 
-.d-inline-block{
-
+.d-inline-block {
   padding: 20px;
   margin: 5px;
   border: 0.5px #0e0e0e solid;
   display: inline-block;
 }
 
-.d-inline-block:nth-child(even){
+.d-inline-block:nth-child(even) {
   background-color: #33ff00;
+}
+
+.d-none {
+  display: none;
+}
+
+.v-hide {
+  visibility: hidden;
+}
+
+.card {
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+  border: 0.5px #0e0e0e solid;
+}
+
+.card-relative {
+  background-color: #33ff00;
+  position: relative;
+  left: 300px; /*jarak dari kiri*/
+  bottom: 40px;
+}
+
+.btn-belanja {
+  background-color: #33ff00;
+  padding: 5px;
+  text-decoration: none;
+  color: #0c0c0c;
+  border-radius: 8px;
+}
+
+.card-product {
+  position: relative;
+}
+
+.badge-promo {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px;
+  position: absolute;
+  top: 2px;
+  right: -10px;
+}
+
+.fixed {
+  width: 40px;
+  height: 40px;
+  border: 0.5px #0e0e0e solid;
+  border-radius: 100%;
+  text-decoration: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.float-right {
+  float: right;
+  background-color: aqua;
+}
+
+.d-flex {
+  display: flex;
+  /* digunakan untuk column
+  flex-direction: column-reverse;  */
+
+  /* mmengatur perataan */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card-flex {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 300px;
 }
