@@ -48,8 +48,26 @@
 }
 
 .d-inline{
-  width: 70%;
+  width: 100dvw !important;
   padding: 20px;
-  margin: 10px 0;
+  margin: 20px;
   border: 0.5px #0e0e0e solid;
+  display: inline;
+}
+
+.nav-item{
+  display: inline;
+  margin: 20px;
+}
+
+.d-inline-block{
+
+  padding: 20px;
+  margin: 5px;
+  border: 0.5px #0e0e0e solid;
+  display: inline-block;
+}
+
+.d-inline-block:nth-child(even){
+  background-color: #33ff00;
 }
