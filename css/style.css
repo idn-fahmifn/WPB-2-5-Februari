@@ -29,6 +29,8 @@
   width: 90dvw; /* 90% lebar layar */
   min-height: 10dvh; /* 10%  tinggi layar */
   border: 0.5px #6b6b6b solid;
+  margin: 20px 0;
+  padding: 20px;
 }
 
 /* display block : 
@@ -40,7 +42,14 @@
 .d-block{
   width: 70%;
   padding: 20px;
-  margin: 10px;
+  margin: 10px 0;
   border: 0.5px #0e0e0e solid;
   display: block;
+}
+
+.d-inline{
+  width: 70%;
+  padding: 20px;
+  margin: 10px 0;
+  border: 0.5px #0e0e0e solid;
 }
