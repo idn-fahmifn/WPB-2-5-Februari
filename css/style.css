@@ -1,8 +1,46 @@
+/* ini adalah style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
 .text-tebal {
   font-weight: 600;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: "Google Sans", sans-serif;
 }
 
 .bg-green {
   background-color: #33ff00;
   padding: 20px;
+}
+
+.box{
+  border: 0.5px #0e0e0e solid;
+  padding: 30px;
+  margin: 20px 0;
+}
+
+.title{
+  background: #33ff00;
+  padding: 30px;
+}
+
+.container{
+  width: 90dvw; /* 90% lebar layar */
+  min-height: 10dvh; /* 10%  tinggi layar */
+  border: 0.5px #6b6b6b solid;
+}
+
+/* display block : 
+  1. menguasai 1 baris
+  2. padding margin berlaku
+  3. bisa mengatur ukuran
+*/
+
+.d-block{
+  width: 70%;
+  padding: 20px;
+  margin: 10px;
+  border: 0.5px #0e0e0e solid;
+  display: block;
 }
