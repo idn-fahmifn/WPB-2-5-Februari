@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button type="button" onclick="return confirm('Apakah saya di klik?');">
+      Klik saya!
+    </button>
+
+    <!-- jika ingin menggunakan external js -->
+    <!-- <script src="NamaFile.js"></script> -->
+
+    <script>
+      // output pada javascript
+      console.log("Hallo saya sedang belajar javascript");
+      //   alert("Ini adalah informasi");
+      //   prompt("Hari ini kamu belajar apa?");
+
+      //   let / const
+      // let -> bisa diubah.
+      let namaVariable = "Saya sedang belajar javascript";
+      console.log(namaVariable);
+
+      let terserah;
+
+      namaVariable = "Ini adalah nilai yang sudah diubah";
+      console.log(namaVariable);
+      console.log(terserah);
+
+      const nilaiPasti = "Belajar javascript mudah bukan??";
+      console.log(nilaiPasti);
+
+      //   Tipe data untuk string :
+      let variable1 = "Ini adalah string pertama";
+      let variable2 = "Ini adalah string kedua";
+      let variable3 = `Ini adalah string kedua`;
+      let variable4 = "10";
+      let variable5 = "10";
+
+      console.log(variable2);
+
+      //   tipe data number
+      let number1 = 1;
+      let number2 = 10;
+      let number3 = 0.5;
+      console.log(number1 + number3);
+
+      //   boolean
+      let kondisi1 = true;
+      let kondisi2 = false;
+      console.log(kondisi1 * number2);
+
+      // undifend
+      // wajib menggunakan let.
+      let und;
+      console.log(und);
+
+      // null
+      let kosong = null;
+      console.log(kosong * number1);
+
+      let biodata = {
+        nama: "Fahmi",
+        alamat: "Jakarta Barat",
+        pekerjaan: "CEO",
+        umur: 23,
+        menikah: false,
+        pendidikan: {
+          smk: "SMKN 1 Jakarta",
+          jurusan: "Teknik Komputer",
+          s1: "Universitas Beijing",
+          prodi: "teknik informatika",
+        },
+      };
+
+      console.log(biodata.alamat);
+      console.log(biodata["pekerjaan"]);
+
+      let result =
+        "Hallo nama saya " +
+        biodata.nama +
+        " saya berumur : " +
+        biodata.umur +
+        " saya kuliah di " +
+        biodata.pendidikan.s1 +
+        " jurusan " +
+        biodata.pendidikan.prodi;
+
+      //   template literal
+      let literal = `hallo nama saya ${biodata.nama}, Saya berumur ${biodata.umur}. Saya kuliah di ${biodata.pendidikan.s1} jurusan ${biodata.pendidikan.prodi}`;
+
+      console.log(literal);
+
+      // Hallo nama saya [nama], saya berumur [umur] dan dulu saya kuliah di [s1], jurusan [prodi]
+
+      let buah = ["apel", "jeruk", "mangga"];
+      let mix = ["azis", true, 40];
+
+      console.log(buah);
+
+      //   saya suka buah mangga;
+      console.log("Hallo saya suka buah " + buah[2]);
+
+      //   operator aritmatik +, -, *, /, %, **
+      let angka1 = 10;
+      let angka2 = 3;
+
+      let hasil = angka1 ** angka2;
+      console.log(hasil);
+
+      //   Operator penugasan :
+
+      let awal = 100;
+      console.log(awal); //100 = awal
+
+      awal += 20;
+      console.log(awal); //awal = 120
+
+      awal -= 60;
+      console.log(awal); //awal = 60
+
+      awal %= 15;
+      console.log(awal); // 0
+
+      //   operator Perbandingan
+      let pembanding1 = 10;
+      let pembanding2 = "10";
+      let pembanding3 = 5;
+
+      console.log(pembanding1 == pembanding2); //true
+      console.log(pembanding1 === pembanding3); //false
+
+      console.log(pembanding1 != pembanding3); //true
+      console.log(pembanding1 !== pembanding3); //true
+
+      console.log(pembanding1 < pembanding3);
+      console.log(pembanding1 < pembanding2);
+
+      // Oeprator Logika : and (&&), or (||), not(!)
+      let gajian = true;
+      let libur = false;
+      let healing = false;
+
+      console.log(gajian && !libur); //true
+      console.log(healing && libur); //false
+
+      console.log(gajian || libur); //true
+      console.log(!healing || libur); //false
+
+      // operator ternerary
+
+      // let umur = prompt("masukan umur kamu");
+      // let ktp = (umur >= 17) ? alert('Kamu bisa bikin KTP') : alert("Kamu belum bisa bikin ktp");
+
+      console.log(typeof literal);
+
+      let update = Number(libur);
+      console.log(update);
+
+      // Kondisi
+      // 1. bisa menggunaka  if-else statement, 2. bisa menggunakan switch.
+
+      // jika nilai dibawah 60 = tidak
+      // jika nilai 61 - 70 = remedial
+      // jika nilai 71 - 80 = cukup
+      // jika nilai 81 - 90 = baik
+      // jika nilai lebih daru 91 = sangat baik
+
+      /*
+      
+      if(kondisi){
+        result
+      } else if (kondisi lain) {
+        result 
+      } else {
+        // jika bukan keduanya
+      }
+
+      */
+
+      //   let nilai = prompt("masukan nilai : ");
+
+      //   if (nilai > 60 && nilai <= 70) {
+      //     alert("Nilai anda remedial");
+      //   } else if (nilai > 70 && nilai <= 80) {
+      //     alert("Nilai anda cukup");
+      //   } else if (nilai > 80 && nilai <= 90) {
+      //     alert("Nilai anda Baik");
+      //   } else if (nilai > 90 && nilai <= 100) {
+      //     alert("Nilai anda luar biasa");
+      //   } else {
+      //     // jika kondisi diatas tidak dipenuhi, maka akan keluar output :
+      //     alert("Kamu salah memasukan nilai");
+      //   }
+
+      //   kalau diberikan nilai kurang dari 60 atau lebih dari 100, maka outputnya : Nilai yang kamu masukan salah.
+
+      //   cara lain yaitu (switch)
+      let hari = prompt("Masukan hari untuk melihat jadwal : ");
+
+      switch (hari.toLowerCase()) {
+        case "senin":
+          alert("Jadwal hari senin adalah futsal");
+          break;
+
+        case "selasa":
+          alert("Jadwal hari selasa adalah berenang");
+          break;
+
+        case "rabu":
+          alert("Jadwal hari Rabu adalah badminton");
+          break;
+
+        case "kamis":
+          alert("Jadwal hari kamis adalah Basket");
+          break;
+
+        default:
+          alert("hari yang kamu masukan tidak terdaftar.");
+          break;
+      }
+    </script>
+  </body>
+</html>

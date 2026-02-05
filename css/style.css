@@ -80,7 +80,7 @@
 }
 
 .card {
-  width: 30%;
+  /* width: 30%; */
   padding: 10px;
   margin: 10px;
   border: 0.5px #0e0e0e solid;
@@ -112,6 +112,7 @@
   position: absolute;
   top: 2px;
   right: -10px;
+  animation: changeColor .4s infinite;
 }
 
 .fixed {
@@ -153,4 +154,61 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: 300px;
+}
+
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 10px; */
+}
+
+/* media queries */
+
+
+
+.btn-daftar{
+  background-color: #0088cc;
+  width: 100px;
+  height: 50px;
+  padding: 10px 30px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 1s;
+}
+
+.btn-daftar:hover{
+  background-color: #006aa0;
+  box-shadow: 0 4px 6px -1px #0000007c;
+  position: relative;
+  bottom: 2px;
+}
+
+@keyframes changeColor {
+  0%{
+    background-color: #006aa0;
+  }
+  25%{
+    background-color: #33ff00;
+    padding: 30px;
+  }
+  50%{
+    background-color: #ff0000;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    background-color: #33ff00;
+  }
+
+  .d-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .d-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
