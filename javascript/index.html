@@ -10,6 +10,8 @@
       Klik saya!
     </button>
 
+    <button type="button" onclick="hallo()">Hallo</button>
+
     <!-- jika ingin menggunakan external js -->
     <!-- <script src="NamaFile.js"></script> -->
 
@@ -199,29 +201,154 @@
       //   kalau diberikan nilai kurang dari 60 atau lebih dari 100, maka outputnya : Nilai yang kamu masukan salah.
 
       //   cara lain yaitu (switch)
-      let hari = prompt("Masukan hari untuk melihat jadwal : ");
+      //   let hari = prompt("Masukan hari untuk melihat jadwal : ");
 
-      switch (hari.toLowerCase()) {
-        case "senin":
-          alert("Jadwal hari senin adalah futsal");
-          break;
+      //   switch (hari.toLowerCase()) {
+      //     case "senin":
+      //       alert("Jadwal hari senin adalah futsal");
+      //       break;
 
-        case "selasa":
-          alert("Jadwal hari selasa adalah berenang");
-          break;
+      //     case "selasa":
+      //       alert("Jadwal hari selasa adalah berenang");
+      //       break;
 
-        case "rabu":
-          alert("Jadwal hari Rabu adalah badminton");
-          break;
+      //     case "rabu":
+      //       alert("Jadwal hari Rabu adalah badminton");
+      //       break;
 
-        case "kamis":
-          alert("Jadwal hari kamis adalah Basket");
-          break;
+      //     case "kamis":
+      //       alert("Jadwal hari kamis adalah Basket");
+      //       break;
 
-        default:
-          alert("hari yang kamu masukan tidak terdaftar.");
-          break;
+      //     default:
+      //       alert("hari yang kamu masukan tidak terdaftar.");
+      //       break;
+      //   }
+
+      //   Looping : for - while
+
+      //   for loop
+
+      // ulang dari mana?
+      // saya ngulang sampe berapa?
+      // i++ nambah 1 data
+
+      for (let i = -4; i <= 10; i++) {
+        console.log("Ini adalah perulangan..", i);
       }
+
+      for (let i = 10; i >= 3; i--) {
+        console.log("Hitungan mundur dari..", i);
+      }
+
+      let materi = ["web basic", "mtcna", "ccna", "cybersecurity", "ui/ux"];
+
+      materi.push("AI");
+      materi.unshift("Laravel");
+      materi.pop();
+
+      for (let i = 0; i <= materi.length - 1; i++) {
+        console.log("saya mengikuti kelas, ", materi[i]);
+      }
+
+      //   while loop
+
+      // looping sebuah kondisi saat login
+
+        let password;
+        const currentPassword = "belajarjs";
+
+        // while loop
+        // while (password !== currentPassword) {
+
+
+
+        //   if(password !== currentPassword)
+        //   {
+        //     password = prompt("masukan password lagi");
+        //   } else if(!password) {
+        //     break;
+        //   }
+
+          
+        // }
+
+        // alert("kamu berhasil login");
+
+      /*
+
+    saldo awal = 50.000
+    batas max = 5000 => tidak bisa ditarik.
+    
+
+
+
+
+    */
+
+    //   let currentSaldo = 50000;
+    //   let narik;
+    //   const batas = 5000;
+
+    //   while (currentSaldo > batas) {
+        
+    //     narik = Number(
+    //       prompt("Masukan Saldo yang ingin kamu tarik (cth : 3000) : "),
+    //     );
+
+    //     if (currentSaldo - narik < batas) {
+    //       alert(
+    //         "❌ Gagal! Saldo harus tersisa minimal 5000. Sisa saldo saat ini: " +
+    //           currentSaldo,
+    //       );
+    //     } else {
+    //       currentSaldo -= narik;
+    //       alert(
+    //         "✅ Anda berhasil menarik saldo, saat ini saldo anda : " +
+    //           currentSaldo,
+    //       );
+    //     }
+    //   }
+
+
+    // function bentuk umum
+    function hallo(){
+      alert("Hallo saya sedang belajar JS");
+    }
+
+    // function parameter
+    function sapa(kelas, nama) {
+      console.log(`Hallo selamat datang, ${nama}. di kelas ${kelas}`);
+    }
+
+    sapa('laravel', 'azis');
+
+    // Rumus luas persegi panjang = pxl
+
+    function rumus(panjang, lebar){
+      let luas = panjang * lebar;
+      return luas;
+    }
+
+    let hasilLuas =  rumus(20, 30);
+    console.log('Luas dari persegi panjang adalah ', hasilLuas)
+
+    let meja = rumus(100, 40);
+    console.log('Luas meja saya adalah ', meja)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
   </body>
 </html>
