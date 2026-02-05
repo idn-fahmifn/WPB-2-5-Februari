@@ -11,6 +11,7 @@
     </button>
 
     <button type="button" onclick="hallo()">Hallo</button>
+    <button type="button" onclick="withdraw()">Penarikan</button>
 
     <!-- jika ingin menggunakan external js -->
     <!-- <script src="NamaFile.js"></script> -->
@@ -255,25 +256,22 @@
 
       // looping sebuah kondisi saat login
 
-        let password;
-        const currentPassword = "belajarjs";
+      let password;
+      const currentPassword = "belajarjs";
 
-        // while loop
-        // while (password !== currentPassword) {
+      // while loop
+      // while (password !== currentPassword) {
 
+      //   if(password !== currentPassword)
+      //   {
+      //     password = prompt("masukan password lagi");
+      //   } else if(!password) {
+      //     break;
+      //   }
 
+      // }
 
-        //   if(password !== currentPassword)
-        //   {
-        //     password = prompt("masukan password lagi");
-        //   } else if(!password) {
-        //     break;
-        //   }
-
-          
-        // }
-
-        // alert("kamu berhasil login");
+      // alert("kamu berhasil login");
 
       /*
 
@@ -286,66 +284,99 @@
 
     */
 
-    //   let currentSaldo = 50000;
-    //   let narik;
-    //   const batas = 5000;
+      //   let currentSaldo = 50000;
+      //   let narik;
+      //   const batas = 5000;
 
-    //   while (currentSaldo > batas) {
-        
-    //     narik = Number(
-    //       prompt("Masukan Saldo yang ingin kamu tarik (cth : 3000) : "),
-    //     );
+      //   while (currentSaldo > batas) {
 
-    //     if (currentSaldo - narik < batas) {
-    //       alert(
-    //         "❌ Gagal! Saldo harus tersisa minimal 5000. Sisa saldo saat ini: " +
-    //           currentSaldo,
-    //       );
-    //     } else {
-    //       currentSaldo -= narik;
-    //       alert(
-    //         "✅ Anda berhasil menarik saldo, saat ini saldo anda : " +
-    //           currentSaldo,
-    //       );
-    //     }
-    //   }
+      //     narik = Number(
+      //       prompt("Masukan Saldo yang ingin kamu tarik (cth : 3000) : "),
+      //     );
 
+      //     if (currentSaldo - narik < batas) {
+      //       alert(
+      //         "❌ Gagal! Saldo harus tersisa minimal 5000. Sisa saldo saat ini: " +
+      //           currentSaldo,
+      //       );
+      //     } else {
+      //       currentSaldo -= narik;
+      //       alert(
+      //         "✅ Anda berhasil menarik saldo, saat ini saldo anda : " +
+      //           currentSaldo,
+      //       );
+      //     }
+      //   }
 
-    // function bentuk umum
-    function hallo(){
-      alert("Hallo saya sedang belajar JS");
-    }
+      // function bentuk umum
+      function hallo() {
+        alert("Hallo saya sedang belajar JS");
+      }
 
-    // function parameter
-    function sapa(kelas, nama) {
-      console.log(`Hallo selamat datang, ${nama}. di kelas ${kelas}`);
-    }
+      // function parameter
+      function sapa(kelas, nama) {
+        console.log(`Hallo selamat datang, ${nama}. di kelas ${kelas}`);
+      }
 
-    sapa('laravel', 'azis');
+      sapa("laravel", "azis");
 
-    // Rumus luas persegi panjang = pxl
+      // Rumus luas persegi panjang = pxl
 
-    function rumus(panjang, lebar){
-      let luas = panjang * lebar;
-      return luas;
-    }
+      function rumus(panjang, lebar) {
+        let luas = panjang * lebar;
+        return luas;
+      }
 
-    let hasilLuas =  rumus(20, 30);
-    console.log('Luas dari persegi panjang adalah ', hasilLuas)
+      let hasilLuas = rumus(20, 30);
+      console.log("Luas dari persegi panjang adalah ", hasilLuas);
 
-    let meja = rumus(100, 40);
-    console.log('Luas meja saya adalah ', meja)
+      let meja = rumus(100, 40);
+      console.log("Luas meja saya adalah ", meja);
 
+      // arrow function
+      let persegi = (sisi) => {
+        let luas = sisi * sisi;
+        return luas;
+      };
 
+      console.log(persegi(40));
 
+      // study case penarikan uang :
 
+      let currentSaldo = 50000;
+      const batas = 5000;
 
+      // Fungsi untuk bisa ngambil atau tidak.
+      function penarikan(saldo, narik) {
+        // aturan saldo harus lebih besar daripada batas :
 
+        if (saldo - narik < batas) {
+          return false; //tidak bisa narik
+        } else {
+          return true; //bisa narik.
+        }
+      }
 
+      // function untuk penarikan 
+      function withdraw(){
+        while (currentSaldo > batas) {
+          let input = prompt(`saldo saat ini ${currentSaldo}, Kamu mau narik berapa?`);
+          let wd = Number(input);
 
+          // stop jika di cancel
+          if(!wd) break;
 
+          // function perhitungan pada penarikan 
+          if(penarikan(currentSaldo, wd) === false){
+            alert("gagal! Saldo kamu tidak mencukupi.");
+          } else {
+            currentSaldo -= wd;
+            alert('Berhasil! sisa saldo kamu saat ini adalah : '+ currentSaldo);
+          }
+        }
+      }
 
-
+      // withdraw();
 
 
 
