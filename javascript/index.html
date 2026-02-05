@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Belajar Dom</title>
   </head>
   <body>
     <button type="button" onclick="return confirm('Apakah saya di klik?');">
@@ -12,6 +12,10 @@
 
     <button type="button" onclick="hallo()">Hallo</button>
     <button type="button" onclick="withdraw()">Penarikan</button>
+
+    <h1 id="judul">Ini adalah judul html</h1>
+
+    <div class="" id="elemenBaru"></div>
 
     <!-- jika ingin menggunakan external js -->
     <!-- <script src="NamaFile.js"></script> -->
@@ -376,8 +380,16 @@
         }
       }
 
-      // withdraw();
+      const title = document.getElementById('judul');
+      title.textContent = "Judul Sudah diubah";
 
+      console.log(title);
+
+      // elemenBaru
+      const newElement = document.getElementById('elemenBaru')
+      console.log(newElement);
+
+      newElement.innerHTML = `<h1>Ini adalah elemen baru</h1>`
 
 
     </script>
